@@ -12,15 +12,11 @@ function Navbar() {
     }`;
 
   return (
-<<<<<<< HEAD
-    <nav className="bg-[var(--bg-dark)] text-[var(--text-white)] px-8 py-4 h-20">
-      <div className="flex items-center justify-between">
-=======
+    
     <nav className="bg-[var(--bg-dark)] text-[var(--text-white)] px-6 ">
       
       {/* Top Bar */}
       <div className=" h-20 flex items-center  justify-between">
->>>>>>> a7032aaa510beafe5a8c92b0c41dc48e9c237189
 
         {/* Logo */}
         <h1 className="text-2xl font-bold">
