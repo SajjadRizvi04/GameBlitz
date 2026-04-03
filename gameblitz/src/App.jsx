@@ -5,8 +5,9 @@ import Home from "./components/home/Home";
 import About from "./components/about/About";
 import { Dashboard } from "./components/dashboard/Dashboard";
 import Profile from "./components/dashboard/Profile";
-import Teams from "./components/dashboard/teams/Teams";
+import Teams from "./components/dashboard/Teams";
 import ContactUs from "./components/contact/ContactUs";
+import Match from "./components/dashboard/Match";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route index element={<Profile />}></Route>
           <Route path="profile" element={<Profile />}></Route>
           <Route path="teams" element={<Teams/>}></Route>
+          <Route path="matches" element={<Match/>}></Route>
         </Route>
         <Route path="/about" element={<About />}></Route>
         <Route path="/contact" element={<ContactUs/>}></Route>
