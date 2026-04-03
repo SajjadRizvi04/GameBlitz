@@ -104,8 +104,8 @@ function AboutUs() {
             </div>
           </div>
           <div className="hero-cta">
-            <OrangeButton content={"Join the Game"} />
-            <NormalButton content={"Learn More"} />
+            <OrangeButton text={"Join the Game"} />
+            <NormalButton text={"Learn More"} />
           </div>
           
         </div>
