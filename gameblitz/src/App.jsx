@@ -1,14 +1,14 @@
-import { Routes } from 'react-router';
-import './App.css'
+import { Routes } from "react-router";
+import "./App.css";
+import Navbar from "./components/shared/Navbar";
 
 function App() {
-
   return (
-      
-      <Routes>
-        
-      </Routes>
+    <>
+      <Navbar />
+      <Routes></Routes>
+    </>
   );
 }
 
-export default App
+export default App;
