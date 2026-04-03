@@ -12,7 +12,7 @@ function Navbar() {
     }`;
 
   return (
-    
+ 
     <nav className="bg-[var(--bg-dark)] text-[var(--text-white)] px-6 ">
       
       {/* Top Bar */}
