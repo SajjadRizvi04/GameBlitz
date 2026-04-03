@@ -1,15 +1,19 @@
-import { Routes } from 'react-router';
-import './App.css'
-import { SupportedSports } from './components/home/supported sports/SupportedSports';
+import { Routes,Route} from "react-router";
+import "./App.css";
+import Navbar from "./components/shared/Navbar";
+import Home from './components/home/Home';
+import { Dashboard } from "./components/dashboard/Dashboard";
 
 function App() {
-
   return (
-    
-      // <Routes>
-        <SupportedSports/>
-      // </Routes>
+    <>
+      <Navbar />
+      <Routes>
+        <Route path='/home' element={<Home/>}></Route>
+        <Route path='/dashboard' element={<Dashboard/>}></Route>
+      </Routes>
+    </>
   );
 }
 
-export default App
+export default App;
