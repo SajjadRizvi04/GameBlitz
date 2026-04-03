@@ -14,6 +14,7 @@ const SIDEBAR_ITEMS = [
   { path: "matches", label: "Matches", icon: <FaCalendarAlt /> },
   { path: "chat", label: "Chat", icon: <IoChatbubbleEllipsesOutline />},
   { path: "notification", label: "Notification", icon: <IoMdNotificationsOutline /> },
+  { path: "sendRequest", label: "SendRequest", icon: <IoMdNotificationsOutline /> },
 ];
 
 export default function DashboardSidebar() {
