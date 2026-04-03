@@ -6,7 +6,7 @@
 
 /* Top description box */
 .colored-bg {
-  background-color: var(--blue-light);
+  background-color: var(--blue-hover);
   padding: 2rem;
   margin: 0 auto 3rem auto;
   margin-top: 15px;
