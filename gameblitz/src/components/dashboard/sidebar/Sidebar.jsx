@@ -9,7 +9,7 @@ import {
 } from "react-icons/fa";
 
 const SIDEBAR_ITEMS = [
-  { path: "/dashboard", label: "Dashboard", icon: <FaTachometerAlt /> },
+  { path: "profile", label: "Profile", icon: <FaTachometerAlt /> },
   { path: "/teams", label: "Teams", icon: <FaUsers /> },
   { path: "/matches", label: "Matches", icon: <FaCalendarAlt /> },
   { path: "/performance", label: "Performance", icon: <FaChartLine /> },
