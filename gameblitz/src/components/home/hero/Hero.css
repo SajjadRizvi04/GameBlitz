@@ -77,3 +77,20 @@
 .colored-text{
     color: var(--orange);
 }
+
+@media (max-width: 768px) {
+    .hero-content {
+        max-width: 100%;
+        background: linear-gradient(
+            to top,
+            rgba(10, 25, 47, 0.95),
+            rgba(10, 25, 47, 0.6),
+            transparent
+        );
+        padding: 1.5rem;
+    }
+
+    .img-overlay {
+        object-position: center;
+    }
+}
