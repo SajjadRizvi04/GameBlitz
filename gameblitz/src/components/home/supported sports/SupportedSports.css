@@ -1,0 +1,11 @@
+.supported-sports-template{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.dividual-sport-card-template{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+}

@@ -1,13 +1,14 @@
 import { Routes } from 'react-router';
 import './App.css'
+import { SupportedSports } from './components/home/supported sports/SupportedSports';
 
 function App() {
 
   return (
     
-      <Routes>
-        
-      </Routes>
+      // <Routes>
+        <SupportedSports/>
+      // </Routes>
   );
 }
 
