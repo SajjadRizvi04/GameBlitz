@@ -37,7 +37,7 @@ function Navbar() {
         {/* Desktop Buttons */}
         <div className="hidden flex items-center md:flex gap-3">
             <CgProfile className="text-(--orange) h-8 w-8" />
-          <NormalButton text="Login" onClick={() => alert("/login")}/>
+          <NormalButton text="Login" onClick={() => navigation("/login")}/>
           <OrangeButton text="Sign Up"  onClick={() => navigation("/register")} />
         </div>
 
