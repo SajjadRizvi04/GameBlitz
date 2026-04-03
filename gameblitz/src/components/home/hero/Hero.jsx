@@ -2,6 +2,8 @@ import {react, useRef, useState, useEffect} from 'react'
 // import { Link } from 'react-router-dom'
 // import {motion} from 'framer-motion'
 // import {useScroll, useTransform} from 'framer-motion'
+import OrangeButton from '../../shared/Orangebutton'
+import NormalButton from '../../shared/NormalButton'
 import bgImg from '/multi-sport.png'
 import "./Hero.css"
 
@@ -19,7 +21,9 @@ function Hero() {
                         Welcome to GameBlitz, the ultimate destination for teams to connect, compete, and dominate.
                         Join our vibrant community and level up your playing experience today!
                     </p>
-                    {/* Button to add wheen pritam makes it */}
+                   <OrangeButton text="Get Started"></OrangeButton>
+                   {/* If needed i will uncomment */}
+                   {/* <NormalButton content="Learn More"></NormalButton> */}
                 </div>
         </div>
         </div>

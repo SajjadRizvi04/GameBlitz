@@ -1,0 +1,123 @@
+.how_it_works {
+  background-color: var(--bg-dark);
+  color: var(--text-white);
+  padding: 3rem 1rem;
+}
+
+/* Top description box */
+.colored-bg {
+  background-color: var(--blue-light);
+  padding: 2rem;
+  margin: 0 auto 3rem auto;
+  margin-top: 15px;
+  border: 2px solid var(--text-white); /* no border needed for now */
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  cursor: none;
+  max-width: 800px; /* */
+}
+
+.colored-bg p {
+  text-align: center;
+  font-weight: 500;
+  color: var(--text-white);
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* Container for cards */
+.htw-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.htw-title h1 {
+  text-align: left;
+  margin-bottom: 1rem;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  padding: 8px;
+  text-indent: 10px;
+  /* background-color: var(--orange); */
+  color: var(--text-white);
+  font-weight: 800;
+}
+
+.htw-cards{
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+/* Individual card */
+.htw-card {
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  contain: content;
+}
+
+/* Number circle */
+.htw-card-num {
+  width: 60px;
+  height: 60px;
+  background-color: var(--orange);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto -30px auto;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #fff;
+  z-index: 2;
+  position: relative;
+  max-width: 400px;
+}
+
+/* Card content box */
+.htw-card-content {
+  border: 2px solid var(--orange);
+  padding: 2.5rem 1.5rem 2rem 1.5rem;
+  background-color: transparent;
+  width: 100%;
+}
+
+/* Title */
+.htw-card-title h3 {
+  font-weight: 800;
+  font-size: clamp(1.25rem, 1.5vw, 1rem);
+  text-align: center;
+  color: var(--orange);
+  margin-bottom: 1rem;
+}
+
+/* Description */
+.htw-card-desc p {
+  text-align: center;
+  color: var(--text-gray);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .htw-container {
+    gap: 1.5rem;
+  }
+
+  .htw-card {
+    width: 100%;
+    max-width: 320px;
+  }
+}
+
+/*push to main app.css later after commint and push*/
+.colored-text{
+    color: var(--orange);
+}
