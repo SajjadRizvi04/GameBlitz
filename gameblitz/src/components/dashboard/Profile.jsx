@@ -24,8 +24,8 @@ function Profile() {
 
   const winRate = ((team.wins / team.gamesPlayed) * 100).toFixed(1);
 
-  return (
-    <div className="h-[calc(100vh-80px)] bg-[var(--bg-dark)] text-[var(--text-white)] flex-1 flex justify-center items-center p-6 ">
+  return (//bg-[var(--bg-dark)] text-[var(--text-white)]
+    <div className="h-[calc(100vh-80px)]   flex-1 flex justify-center items-center p-6 ">
       {/* Main Card */}
       <motion.div
         initial={{ opacity: 0, y: 50 }}
@@ -35,8 +35,8 @@ function Profile() {
       >
         {/* Team Header */}
         <div className="text-center mb-6">
-          <h1 className="text-3xl font-bold tracking-wide">
-            {team.name} <span className="text-[var(--orange)]">⚡</span>
+          <h1 className="text-3xl font-bold tracking-wide text-light">
+            {team.name} <span className="text-[var(--orange)]"></span>
           </h1>
           <p className="text-gray-400 text-sm mt-1">UID: {team.uid}</p>
         </div>
@@ -76,7 +76,7 @@ function Profile() {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: index * 0.1 }}
                 whileHover={{ scale: 1.03 }}
-                className="flex w-200 items-center justify-between bg-[var(--bg-dark)] border border-gray-700 p-4 rounded-lg shadow"
+                className="flex w-200 items-center text-[var(--text-white)] justify-between bg-[var(--bg-dark)] border border-gray-700 p-4 rounded-lg shadow"
               >
                 {/* Left */}
                 <div className="flex items-center gap-3">

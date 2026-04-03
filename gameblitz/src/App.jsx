@@ -14,6 +14,7 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Chat from "./components/dashboard/Chat";
 import Notification from "./components/dashboard/Notification";
+import LandingNoTeam from "./components/dashboard/no-team/LandingNoTeam";
 
 function App() {
   return (
@@ -36,6 +37,7 @@ function App() {
           <Route path="chat" element={<Chat/>}></Route>
           <Route path="notification" element={<Notification/>}></Route>
         </Route>
+        <Route path="/no-team" element={<LandingNoTeam/>}></Route>
         <Route path="/about" element={<About />}></Route>
         <Route path="/contact" element={<ContactUs/>}></Route>
       </Routes>

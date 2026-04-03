@@ -71,7 +71,7 @@ export default function Teams() {
   };
 
   return (
-    <div className="flex flex-col h-[calc(100vh-70px)] w-full bg-gray-900 text-white">
+    <div className="flex flex-col h-[calc(100vh-70px)] bg-gray-900 text-white w-full ">{/*bg-gray-900 text-white*/}
 
       {/* Header */}
       <div className="px-4 sm:px-6 md:px-10 pt-5 pb-4 border-b border-gray-700/60 flex items-center justify-between">
@@ -109,7 +109,7 @@ export default function Teams() {
                   exit={cardAnim.exit}
                   layout
                   whileHover={{ scale: 1.012 }}
-                  className="bg-gray-800 border border-gray-700 rounded-2xl p-4 flex items-center gap-3"
+                  className="bg-gray-800 text-white border border-gray-700 rounded-2xl p-4 flex items-center gap-3"
                 >
                   {/* Avatar */}
                   <div

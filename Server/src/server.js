@@ -6,7 +6,8 @@ import { DomainError } from "../domain errors/domainErrors.js";
 import authenticationRouter from "../endpoints/authentication/playerRoute.js";
 import cors from "cors";
 import { sportsRouter } from "../endpoints/sports/sports.routes.js";
-
+// import { authenticatePlayer } from "../endpoints/team/player.service.js";
+import teamRouter from "../endpoints/team/team.routes.js"
 
 const app = express();
 app.set("trust proxy", 1)
@@ -33,6 +34,7 @@ app.use(passport.session());
 // endpoints
 app.use("/api/auth", authenticationRouter);
 app.use("/api/sports", sportsRouter);
+app.use("/api/players", teamRouter);
 
 
 app.post("/login",passport.authenticate("local"), (req, res) => {
