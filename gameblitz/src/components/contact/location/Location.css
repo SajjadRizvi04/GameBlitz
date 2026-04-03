@@ -1,0 +1,11 @@
+.location-heading {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+.location-img {
+    border-radius: 1rem;
+    margin-bottom: 10px;
+    height: 80%;
+    width: 80%;
+}

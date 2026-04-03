@@ -5,7 +5,8 @@ import Home from "./components/home/Home";
 import About from "./components/about/About";
 import { Dashboard } from "./components/dashboard/Dashboard";
 import Profile from "./components/dashboard/Profile";
-import Teams from "./components/dashboard/Teams";
+import Teams from "./components/dashboard/teams/Teams";
+import ContactUs from "./components/contact/ContactUs";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="teams" element={<Teams/>}></Route>
         </Route>
         <Route path="/about" element={<About />}></Route>
+        <Route path="/contact" element={<ContactUs/>}></Route>
       </Routes>
     </>
   );

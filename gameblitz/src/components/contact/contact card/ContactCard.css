@@ -1,0 +1,26 @@
+.contact-card-template{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.my-contacts-head {
+    font-size: 2rem;
+    font-weight: 600;
+}
+.email-dets {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+
+}
+.phone-dets{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+.icons-div {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    margin-top: 10px;
+}

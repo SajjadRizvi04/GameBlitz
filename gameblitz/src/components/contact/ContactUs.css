@@ -1,0 +1,17 @@
+.contact-page-template {
+    width: 100vw;
+    padding: 15px;
+    display: flex;
+    flex-direction: row;
+    gap: 5rem;
+    justify-content: center;
+    height: 80vh;
+    flex-wrap: wrap;
+}
+
+.location-and-contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 3rem;
+}

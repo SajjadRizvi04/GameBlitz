@@ -1,0 +1,52 @@
+.get-in-touch-main {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background: #0A192F;
+    color: white;
+    width: max-content;
+    padding: 20px;
+    border-radius: 8px;
+    height: fit-content;
+    margin-top: 15px;
+}
+.get-in-touch-heading{
+    font-weight: 600;
+    font-size: 20px;
+}
+.contact-description-p{
+    font-size:14px ;
+}
+.get-in-touch-main form{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.get-in-touch-main form input{
+    background-color: white;
+    color: black;
+    padding: 5px;
+    border-radius: 3px;
+}
+.contact-first-row{
+    display: flex;
+    gap: 10px;
+}
+.get-in-touch-main form textarea{
+    background-color: #fff;
+    color:black;
+    padding: 5px;
+}
+.get-in-touch-main form button{
+     margin-top: 18px;
+  padding: 12px;
+  /* background: #1677ff; */
+  background: #F77F00;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
