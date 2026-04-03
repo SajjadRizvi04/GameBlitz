@@ -9,9 +9,7 @@ function Map() {
             <h3 className="text-4xl text-(--orange) font-bold">Find Matches Near You</h3>
             <h3 className="text-4xl  font-bold mb-2">Map & Search</h3>
             <p className="text-(--text-grey)">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Voluptatibus nisi numquam modi ullam praesentium nobis architecto,
-              accusantium officiis.
+              Discover local matches, connect with passionate teams, and take your game to the next level.
             </p>
           </div>
           <div className="">
@@ -23,7 +21,7 @@ function Map() {
           </div>
         </div>
         <div className=" w-136 h-80 rounded-xl">
-            <img src="/map.png" alt="" className="h-full object-cover rounded-xl"/>
+            <img src="/map.png" alt="" className="h-full object-cover rounded-xl transition hover:scale-105"/>
         </div>
       </div>
     </div>
