@@ -8,12 +8,12 @@ const STEPS = [
     {
         id: 1,
         title: "Join Community",
-        desc: "Login with your email id or be invited.",
+        desc: "Create profile/login with your email id OR be invited. Add your sport or team.",
     },
     {
         id: 2,
         title: "Join Teams",
-        desc: "Join a team or create your own team.",
+        desc: "Browse local teams and join one or create your own team.",
     },
     {
         id: 3,
