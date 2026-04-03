@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import OrangeButton from "./Orangebutton";
 import NormalButton from "./NormalButton";
+import { CgProfile } from "react-icons/cg";
 
 function Navbar() {
   const [open, setOpen] = useState(false);
@@ -32,7 +33,8 @@ function Navbar() {
         </div>
 
         {/* Desktop Buttons */}
-        <div className="hidden md:flex gap-3">
+        <div className="hidden flex items-center md:flex gap-3">
+            <CgProfile className="text-(--orange) h-8 w-8" />
           <NormalButton text="Login" />
           <OrangeButton text="Sign Up" />
         </div>
@@ -55,6 +57,7 @@ function Navbar() {
           <NavLink to="/contact" className={linkStyle} onClick={() => setOpen(false)}>Contact</NavLink>
 
           <div className="flex flex-col gap-2 mt-2">
+            <CgProfile className="text-(--orange)" />
             <NormalButton text="Login" />
             <OrangeButton text="Sign Up" />
           </div>

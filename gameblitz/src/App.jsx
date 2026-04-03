@@ -6,7 +6,9 @@ import About from "./components/about/About";
 import { Dashboard } from "./components/dashboard/Dashboard";
 import Profile from "./components/dashboard/Profile";
 import Teams from "./components/dashboard/Teams";
+import Teams from "./components/dashboard/Teams";
 import ContactUs from "./components/contact/ContactUs";
+import Chat from "./components/dashboard/Chat";
 import Match from "./components/dashboard/Match";
 import Login from "./components/Authentication/login/Login";
 import Signup from "./components/Authentication/signup/Signup";
@@ -33,6 +35,7 @@ function App() {
           <Route index element={<Profile />}></Route>
           <Route path="profile" element={<Profile />}></Route>
           <Route path="teams" element={<Teams/>}></Route>
+          <Route path="chat" element={<Chat/>}></Route>
           <Route path="matches" element={<Match/>}></Route>
           <Route path="chat" element={<Chat/>}></Route>
           <Route path="notification" element={<Notification/>}></Route>
