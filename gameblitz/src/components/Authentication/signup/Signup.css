@@ -1,0 +1,143 @@
+.signup-section,.signup-section{
+  width: 100%;
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ===== Auth Container ===== */
+.auth-box {
+  width: 100%;
+  max-width: 380px;
+  /* margin: 60px auto; */
+  padding: 32px 24px;
+  background: #0A192F;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  color: white;
+}
+
+/* ===== Heading ===== */
+.auth-box h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+/* ===== Form Layout ===== */
+.auth-box form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* ===== Inputs ===== */
+.auth-box input {
+  width: 100%;
+  padding: 10px 12px;
+  margin-top: 12px;
+  border: 1px solid #d9d9d9;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: all 0.2s ease;
+  color: white;
+}
+
+/* Focus state */
+.auth-box input:focus {
+  outline: none;
+  border-color: #1677ff;
+  box-shadow: 0 0 0 2px rgba(22, 119, 255, 0.15);
+}
+
+/* Error input state (optional enhancement) */
+.auth-box input.error-input {
+  border-color: #ff4d4f;
+  background-color: #fff2f0;
+}
+
+/* ===== Error Messages ===== */
+.error {
+  color: #ff4d4f;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+/* ===== Button ===== */
+.auth-box button {
+  margin-top: 18px;
+  padding: 12px;
+  /* background: #1677ff; */
+  background: #F77F00;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+/* Disabled state (optional) */
+.auth-box button:disabled {
+  background: #bfbfbf;
+  cursor: not-allowed;
+}
+
+/* ===== Link ===== */
+.link {
+  margin-top: 16px;
+  text-align: center;
+  font-size: 13px;
+  color: #1677ff;
+  cursor: pointer;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+/* ===== Password Strength Meter Spacing ===== */
+.auth-box .strength-meter {
+  margin-top: 8px;
+}
+.create-acc-btn{
+  margin-top: 18px;
+  padding: 12px 20px;
+  background: #0A192F;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.create-acc-btn:disabled {
+  background: #bfbfbf;
+  cursor: not-allowed;
+}
+/* ===== Responsive ===== */
+@media (max-width: 480px) {
+  .auth-box {
+    margin: 30px 16px;
+    padding: 24px 16px;
+  }
+
+  .auth-box h2 {
+    font-size: 20px;
+  }
+
+  .auth-box input {
+    font-size: 13px;
+    padding: 9px 10px;
+  }
+
+  .auth-box button {
+    padding: 10px;
+  }
+}
