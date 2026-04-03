@@ -3,7 +3,7 @@ import "../signup/Signup.css";
 import { NavLink, useNavigate } from "react-router-dom";
 import "./Login.css";
 import bgImage from "/bgAuth.png";
-import { checkAuthentication, loginPlayer } from "../APIs/authentication.api";
+import { checkAuthentication, loginPlayer, authenticatePlayer } from "../APIs/authentication.api";
 import { toast } from "react-toastify"; 
 import { useEffect } from "react";
 
@@ -26,9 +26,20 @@ export default function Login({ switchToSignup }) {
     // later → API call
     try {
       const res = await loginPlayer(formData);
-      // console.log("Login successful:", res);
+      
+      const player_has_team = await authenticatePlayer(formData)
+      console.log(player_has_team);
+
       toast.success("Login successful!");
-      navigation("/dashboard")
+      if (player_has_team.status == true){
+        
+        navigation("/dashboard")
+      }else{
+        navigation("/no-team")
+      }
+
+      
+     
     } catch (error) {
       console.error("Login failed:", error);
       toast.error("Login failed. Please check your credentials.");

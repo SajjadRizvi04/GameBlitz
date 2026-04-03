@@ -26,3 +26,11 @@ export const checkAuthentication = async () => {
         const response = await api.get("/api/auth/check-auth", { withCredentials: true });
         return response.data;
 }
+
+export const authenticatePlayer = async (formdata) =>{
+    const email = formdata.email
+    // console.log("email:",email) :arrivin
+    const response = await api.get("/api/players/authenticate-player", { params: { email }, withCredentials: true });
+    console.log(response)
+    return response;
+}

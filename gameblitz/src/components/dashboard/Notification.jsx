@@ -70,8 +70,8 @@ export default function Notification() {
   const reject = (id) => dismiss(id);
   const clearAll = () => setNotifications([]);
 
-  return (
-    <div className="flex flex-col h-[calc(100vh-70px)] w-full bg-gray-900 text-white">
+  return (//bg-gray-900 text-white
+    <div className="flex flex-col h-[calc(100vh-70px)] w-full ">
 
       {/* Header */}
       <div className="px-4 sm:px-6 md:px-10 pt-5 pb-4 border-b border-gray-700/60 flex items-center justify-between">
@@ -151,7 +151,7 @@ export default function Notification() {
                       <motion.button
                         whileTap={{ scale: 0.93 }}
                         onClick={() => reject(n.id)}
-                        className="px-4 py-1.5 rounded-lg text-sm font-medium bg-gray-700 text-gray-300 hover:bg-gray-600 transition-colors"
+                        className="px-4 py-1.5 rounded-lg text-sm font-medium bg-gray-700 text-white hover:bg-gray-600 transition-colors"
                       >
                         Decline
                       </motion.button>

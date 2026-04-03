@@ -40,6 +40,7 @@ function App() {
           <Route path="notification" element={<Notification/>}></Route>
           <Route path="sendRequest" element={<Request/>}></Route>
         </Route>
+        <Route path="/no-team" element={<LandingNoTeam/>}></Route>
         <Route path="/about" element={<About />}></Route>
         <Route path="/contact" element={<ContactUs/>}></Route>
       </Routes>

@@ -70,9 +70,9 @@ const cardAnim = {
 export default function MatchesSection() {
   const [tab, setTab] = useState("upcoming");
 
-  return (
-    <div className="w-full flex justify-center bg-[var(--bg-dark)]">
-      <div className=" bg-gray-900 text-white p-6 flex justify-center backdrop-blur-md  w-full">
+  return (//bg-[var(--bg-dark)]  bg-gray-900
+    <div className="w-full flex justify-center ">
+      <div className=" text-white p-6 flex justify-center backdrop-blur-md  w-full">
         <div className="w-full max-w-2xl">
           {/* Header */}
           <motion.div
