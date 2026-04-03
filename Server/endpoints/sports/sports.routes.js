@@ -7,6 +7,7 @@ sportsRouter.get("/registered-sports", async (req, res) => {
     const [rows] = await connection.query(
         `SELECT name FROM sports`
     );
+    console.log(rows);
     const sports = rows.map(row => row.name);
     res.json({ sports }); 
 })

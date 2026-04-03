@@ -15,10 +15,14 @@ export const registerPlayer = async (payload) => {
 }
 
 export const loginPlayer = async (payload) => {
-    const response = await api.post("/api/auth/login", payload);
+    const response = await api.post("/login", payload);
     return response.data;
 }
 export const getRegisteredSports = async () => {
     const response = await api.get("/api/sports/registered-sports");
     return response.data.sports;
+}
+export const checkAuthentication = async () => {
+        const response = await api.get("/api/auth/check-auth", { withCredentials: true });
+        return response.data;
 }
