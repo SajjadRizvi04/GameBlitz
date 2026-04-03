@@ -3,3 +3,4 @@ react-router
 react-router-dom
 react-icons
 framer-motion
+react-toastify

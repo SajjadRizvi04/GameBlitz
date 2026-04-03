@@ -12,6 +12,8 @@ import Login from "./components/Authentication/login/Login";
 import Signup from "./components/Authentication/signup/Signup";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Chat from "./components/dashboard/Chat";
+import Notification from "./components/dashboard/Notification";
 
 function App() {
   return (
@@ -31,6 +33,8 @@ function App() {
           <Route path="profile" element={<Profile />}></Route>
           <Route path="teams" element={<Teams/>}></Route>
           <Route path="matches" element={<Match/>}></Route>
+          <Route path="chat" element={<Chat/>}></Route>
+          <Route path="notification" element={<Notification/>}></Route>
         </Route>
         <Route path="/about" element={<About />}></Route>
         <Route path="/contact" element={<ContactUs/>}></Route>
