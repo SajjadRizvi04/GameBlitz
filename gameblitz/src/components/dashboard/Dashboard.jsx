@@ -4,7 +4,7 @@ export function Dashboard(){
 
     return(
         <>
-            <section className="dashboard-template">
+            <section className="flex dashboard-template">
                 <DashboardSidebar />
                 <Outlet />
 

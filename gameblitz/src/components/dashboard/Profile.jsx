@@ -25,7 +25,7 @@ function Profile() {
   const winRate = ((team.wins / team.gamesPlayed) * 100).toFixed(1);
 
   return (
-    <div className="min-h-screen bg-[var(--bg-dark)] text-[var(--text-white)] flex justify-center items-center p-6">
+    <div className="h-[calc(100vh-80px)] bg-[var(--bg-dark)] text-[var(--text-white)] flex-1 flex justify-center items-center p-6">
 
       {/* Main Card */}
       <motion.div
