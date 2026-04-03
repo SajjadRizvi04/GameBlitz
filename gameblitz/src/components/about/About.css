@@ -452,6 +452,7 @@
   padding: 20px;
   border-radius: 12px;
   transition: all 0.3s ease;
+  cursor: default;
 }
 
 .our-team-card:hover {
@@ -628,4 +629,8 @@
     width: 100%;
     color: var(--text-dark);
   }
+}
+
+button{
+    color: var(--text-dark);
 }
