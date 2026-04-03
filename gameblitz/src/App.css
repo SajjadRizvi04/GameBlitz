@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+:root {
+  /* Background Colors */
+  --bg-dark: #0A192F;        /* main background */
+  --bg-gradient: #0F2A5A;    /* gradient second color */
+  --text-grey: rgb(103, 101, 101);
+  /* UI Elements */
+  --dark-blue: #1E3A8A;        /* cards / sections */
+  --blue-light: #3B82F6;     /* highlights */
+
+  /* Action */
+  --orange: #F97316;    /* buttons */
+
+  /* Text & Borders */
+  --text-white: #FFFFFF;
+  --border-light: #E5E7EB;
+}
+
+/* Hide scrollbar */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE & Edge */
+  scrollbar-width: none;     /* Firefox */
+}
