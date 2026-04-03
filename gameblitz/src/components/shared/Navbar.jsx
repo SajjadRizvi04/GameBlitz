@@ -38,7 +38,7 @@ function Navbar() {
         <div className="hidden flex items-center md:flex gap-3">
             <CgProfile className="text-(--orange) h-8 w-8" />
           <NormalButton text="Login" onClick={() => navigation("/login")}/>
-          <OrangeButton text="Sign Up"  onClick={() => navigation("/regis ter")} />
+          <OrangeButton text="Sign Up"  onClick={() => navigation("/register")} />
         </div>
 
         {/* Mobile Menu Button */}
