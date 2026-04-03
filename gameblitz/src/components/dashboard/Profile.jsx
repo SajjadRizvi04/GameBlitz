@@ -7,7 +7,7 @@ function Profile() {
     uid: "TEAM-92831",
     gamesPlayed: 20,
     wins: 14,
-     members: [
+    members: [
       { name: "Pritam", role: "Captain" },
       { name: "Rahul", role: "Striker" },
       { name: "Aman", role: "Defender" },
@@ -25,16 +25,14 @@ function Profile() {
   const winRate = ((team.wins / team.gamesPlayed) * 100).toFixed(1);
 
   return (
-    <div className="h-[calc(100vh-80px)] bg-[var(--bg-dark)] text-[var(--text-white)] flex-1 flex justify-center items-center p-6">
-
+    <div className="h-[calc(100vh-80px)] bg-[var(--bg-dark)] text-[var(--text-white)] flex-1 flex justify-center items-center p-6 ">
       {/* Main Card */}
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className="w-full max-w-4xl bg-white/5 backdrop-blur-md rounded-2xl shadow-xl p-6"
+        className="w-full h-120 max-w-4xl bg-white/5 backdrop-blur-md rounded-2xl shadow-xl p-6"
       >
-
         {/* Team Header */}
         <div className="text-center mb-6">
           <h1 className="text-3xl font-bold tracking-wide">
@@ -45,11 +43,10 @@ function Profile() {
 
         {/* Stats Section */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
-          
-          {[ 
+          {[
             { label: "Games", value: team.gamesPlayed },
             { label: "Wins", value: team.wins },
-            { label: "Win Rate", value: `${winRate}%` }
+            { label: "Win Rate", value: `${winRate}%` },
           ].map((stat, i) => (
             <motion.div
               key={i}
@@ -65,22 +62,21 @@ function Profile() {
               </p>
             </motion.div>
           ))}
-
         </div>
 
         {/* Members Section */}
         <div>
           <h2 className="text-xl font-semibold mb-4">Team Members</h2>
 
-          <div className="grid sm:grid-cols-2 gap-4">
+          <div className="max-h-[200px] overflow-y-auto no-scrollbar space-y-3">
             {team.members.map((member, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: -30 }}
                 animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: index * 0.15 }}
+                transition={{ delay: index * 0.1 }}
                 whileHover={{ scale: 1.03 }}
-                className="flex items-center justify-between bg-[var(--bg-dark)] border border-gray-700 p-4 rounded-lg shadow"
+                className="flex w-200 items-center justify-between bg-[var(--bg-dark)] border border-gray-700 p-4 rounded-lg shadow"
               >
                 {/* Left */}
                 <div className="flex items-center gap-3">
@@ -98,7 +94,6 @@ function Profile() {
             ))}
           </div>
         </div>
-
       </motion.div>
     </div>
   );
