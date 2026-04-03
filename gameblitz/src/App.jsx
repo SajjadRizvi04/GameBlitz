@@ -13,8 +13,12 @@ import Login from "./components/Authentication/login/Login";
 import Signup from "./components/Authentication/signup/Signup";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+
 import Notification from "./components/dashboard/Notification";
+import Request from "./components/dashboard/Request";
 import LandingNoTeam from "./components/dashboard/no-team/LandingNoTeam";
+import PartOfTeam from "./components/dashboard/part-of-team/PartOfTeam";
+import AdminPanel from "./components/dashboard/admin-panel/AdminPanel";
 
 function App() {
   return (
@@ -30,15 +34,18 @@ function App() {
         <Route path="/login" element={<Login/>}></Route>
         <Route path="/register" element={<Signup/>}></Route>
         <Route path="/dashboard" element={<Dashboard />}>
-          <Route index element={<Profile />}></Route>
+          <Route index element={<AdminPanel />}></Route>
+          <Route path="admin-panel" element={<AdminPanel />}></Route>
           <Route path="profile" element={<Profile />}></Route>
           <Route path="teams" element={<Teams/>}></Route>
           <Route path="chat" element={<Chat/>}></Route>
           <Route path="matches" element={<Match/>}></Route>
           <Route path="chat" element={<Chat/>}></Route>
           <Route path="notification" element={<Notification/>}></Route>
+          <Route path="sendRequest" element={<Request/>}></Route>
         </Route>
         <Route path="/no-team" element={<LandingNoTeam/>}></Route>
+        <Route path="/part-of-team" element={<PartOfTeam/>}></Route>
         <Route path="/about" element={<About />}></Route>
         <Route path="/contact" element={<ContactUs/>}></Route>
       </Routes>

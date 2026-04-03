@@ -1,0 +1,583 @@
+/* PartOfTeam Component Styles */
+
+.part-of-team-wrapper {
+  min-height: calc(100vh - 80px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  background: linear-gradient(135deg, rgba(255, 107, 53, 0.05) 0%, rgba(10, 25, 47, 0.05) 100%);
+}
+
+.part-of-team-container {
+  width: 100%;
+  max-width: 900px;
+}
+
+/* Loading State */
+.loading-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+.spinner {
+  width: 3rem;
+  height: 3rem;
+  border: 3px solid rgba(255, 107, 53, 0.2);
+  border-top: 3px solid var(--orange);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loading-state p {
+  color: var(--text-gray);
+  font-size: 0.95rem;
+}
+
+/* Hero Section */
+.pot-hero {
+  background: linear-gradient(135deg, rgba(30, 58, 138, 0.15) 0%, rgba(11, 30, 60, 0.2) 100%);
+  border: 1px solid rgba(255, 107, 53, 0.2);
+  border-radius: 2rem;
+  padding: 3rem 2rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+
+.pot-hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 107, 53, 0.5), transparent);
+}
+
+.pot-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top-right, rgba(255, 107, 53, 0.1), transparent);
+  opacity: 0.5;
+}
+
+.pot-hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.pot-icon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  animation: bounce 2s ease-in-out infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.pot-hero h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 900;
+  background: linear-gradient(135deg, #FFFFFF 0%, #B0E0FF 50%, #FF6B00 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin: 0 0 0.5rem 0;
+  line-height: 1.1;
+}
+
+.pot-hero p {
+  font-size: 1.05rem;
+  color: var(--text-gray);
+  margin: 0;
+}
+
+/* Main Card */
+.pot-card {
+  background: linear-gradient(135deg, rgba(30, 58, 138, 0.1) 0%, rgba(11, 30, 60, 0.1) 100%);
+  border: 1px solid rgba(255, 107, 53, 0.15);
+  border-radius: 2rem;
+  padding: 2rem;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+
+.pot-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, rgba(255, 107, 53, 0.5) 50%, transparent 100%);
+}
+
+/* Card Header */
+.pot-card-header {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(255, 107, 53, 0.1);
+}
+
+.pot-team-avatar {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 1.25rem;
+  background: linear-gradient(135deg, var(--orange) 0%, var(--orange-light) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  font-size: 1.5rem;
+  color: white;
+  box-shadow: 0 8px 24px rgba(255, 107, 53, 0.3);
+  flex-shrink: 0;
+}
+
+.pot-team-info h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-white);
+  margin: 0 0 0.5rem 0;
+}
+
+.pot-team-id {
+  font-size: 0.85rem;
+  color: var(--text-gray);
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+
+.pot-team-date {
+  font-size: 0.8rem;
+  color: var(--text-gray);
+  margin: 0.25rem 0 0 0;
+}
+
+/* Status Badge */
+.pot-team-status {
+  margin-bottom: 1.5rem;
+}
+
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: linear-gradient(135deg, rgba(52, 211, 153, 0.15) 0%, rgba(16, 185, 129, 0.1) 100%);
+  border: 1px solid rgba(52, 211, 153, 0.3);
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  color: #34D399;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.status-dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background: #34D399;
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Stats Grid */
+.pot-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.stat-item {
+  background: linear-gradient(135deg, rgba(30, 58, 138, 0.1) 0%, rgba(11, 30, 60, 0.1) 100%);
+  border: 1px solid rgba(255, 107, 53, 0.15);
+  border-radius: 1.25rem;
+  padding: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.stat-item:hover {
+  border-color: rgba(255, 107, 53, 0.3);
+  background: linear-gradient(135deg, rgba(30, 58, 138, 0.15) 0%, rgba(11, 30, 60, 0.15) 100%);
+  box-shadow: 0 8px 24px rgba(255, 107, 53, 0.15);
+}
+
+.stat-icon {
+  font-size: 1.75rem;
+  flex-shrink: 0;
+}
+
+.stat-content {
+  flex: 1;
+}
+
+.stat-label {
+  font-size: 0.8rem;
+  color: var(--text-gray);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 0;
+  font-weight: 600;
+}
+
+.stat-value {
+  font-size: 0.95rem;
+  color: var(--text-white);
+  margin: 0.25rem 0 0 0;
+  font-weight: 600;
+}
+
+/* Actions */
+.pot-actions {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.pot-btn {
+  flex: 1;
+  min-width: 200px;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.pot-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.pot-btn-primary {
+  background: linear-gradient(135deg, var(--orange) 0%, var(--orange-light) 100%);
+  color: white;
+  box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+}
+
+.pot-btn-primary:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(255, 107, 53, 0.4);
+}
+
+.pot-btn-primary:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.btn-arrow {
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+
+.pot-btn-primary:hover:not(:disabled) .btn-arrow {
+  transform: translateX(4px);
+}
+
+.pot-btn-secondary {
+  background: rgba(107, 114, 128, 0.2);
+  border: 1px solid rgba(255, 107, 53, 0.2);
+  color: var(--text-gray);
+}
+
+.pot-btn-secondary:hover:not(:disabled) {
+  background: rgba(255, 107, 53, 0.15);
+  border-color: rgba(255, 107, 53, 0.4);
+  color: var(--orange);
+}
+
+/* Quick Links */
+.pot-quick-links {
+  background: linear-gradient(135deg, rgba(30, 58, 138, 0.1) 0%, rgba(11, 30, 60, 0.1) 100%);
+  border: 1px solid rgba(255, 107, 53, 0.15);
+  border-radius: 2rem;
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.pot-quick-links::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, rgba(255, 107, 53, 0.5) 50%, transparent 100%);
+}
+
+.pot-quick-links h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-white);
+  margin: 0 0 1.5rem 0;
+}
+
+.pot-links-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+}
+
+.pot-link-item {
+  background: linear-gradient(135deg, rgba(30, 58, 138, 0.15) 0%, rgba(11, 30, 60, 0.15) 100%);
+  border: 1px solid rgba(255, 107, 53, 0.15);
+  border-radius: 1.25rem;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.pot-link-item:hover {
+  border-color: rgba(255, 107, 53, 0.3);
+  background: linear-gradient(135deg, rgba(30, 58, 138, 0.2) 0%, rgba(11, 30, 60, 0.2) 100%);
+  box-shadow: 0 8px 24px rgba(255, 107, 53, 0.15);
+}
+
+.link-icon {
+  font-size: 1.75rem;
+  display: block;
+  transition: transform 0.2s ease;
+}
+
+.pot-link-item:hover .link-icon {
+  transform: scale(1.2);
+}
+
+.link-text {
+  font-size: 0.9rem;
+  color: var(--text-white);
+  font-weight: 600;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .part-of-team-wrapper {
+    padding: 1rem;
+    min-height: calc(100vh - 70px);
+  }
+
+  .pot-hero {
+    padding: 2rem 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .pot-icon {
+    font-size: 3rem;
+  }
+
+  .pot-hero h1 {
+    font-size: 1.75rem;
+  }
+
+  .pot-card {
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .pot-card-header {
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+  }
+
+  .pot-team-avatar {
+    width: 3.5rem;
+    height: 3.5rem;
+    font-size: 1.25rem;
+  }
+
+  .pot-team-info h2 {
+    font-size: 1.25rem;
+  }
+
+  .pot-stats {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .stat-item {
+    padding: 1rem;
+  }
+
+  .pot-actions {
+    gap: 0.75rem;
+  }
+
+  .pot-btn {
+    min-width: auto;
+    font-size: 0.9rem;
+    padding: 0.625rem 1.25rem;
+  }
+
+  .pot-quick-links {
+    padding: 1.5rem;
+  }
+
+  .pot-links-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+
+  .pot-link-item {
+    padding: 1.25rem 0.75rem;
+    border-radius: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .part-of-team-wrapper {
+    padding: 0.75rem;
+  }
+
+  .pot-hero {
+    padding: 1.5rem 1rem;
+    margin-bottom: 1rem;
+    border-radius: 1.5rem;
+  }
+
+  .pot-icon {
+    font-size: 2.5rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .pot-hero h1 {
+    font-size: 1.4rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .pot-hero p {
+    font-size: 0.9rem;
+  }
+
+  .pot-card {
+    padding: 1.25rem;
+    margin-bottom: 1rem;
+    border-radius: 1.5rem;
+  }
+
+  .pot-card-header {
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.75rem;
+  }
+
+  .pot-team-avatar {
+    width: 3rem;
+    height: 3rem;
+    font-size: 1rem;
+  }
+
+  .pot-team-info h2 {
+    font-size: 1.05rem;
+  }
+
+  .pot-team-id {
+    font-size: 0.75rem;
+  }
+
+  .status-badge {
+    font-size: 0.8rem;
+    padding: 0.375rem 0.75rem;
+  }
+
+  .pot-stats {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .stat-item {
+    padding: 0.875rem;
+    border-radius: 1rem;
+  }
+
+  .stat-icon {
+    font-size: 1.5rem;
+  }
+
+  .stat-label {
+    font-size: 0.7rem;
+  }
+
+  .stat-value {
+    font-size: 0.85rem;
+  }
+
+  .pot-actions {
+    gap: 0.5rem;
+    flex-direction: column;
+    margin-bottom: 1rem;
+  }
+
+  .pot-btn {
+    width: 100%;
+    min-width: auto;
+    font-size: 0.85rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .pot-quick-links {
+    padding: 1.25rem;
+    border-radius: 1.5rem;
+  }
+
+  .pot-quick-links h3 {
+    font-size: 1.05rem;
+    margin-bottom: 1rem;
+  }
+
+  .pot-links-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+  }
+
+  .pot-link-item {
+    padding: 1rem 0.5rem;
+    border-radius: 0.875rem;
+    gap: 0.5rem;
+  }
+
+  .link-icon {
+    font-size: 1.5rem;
+  }
+
+  .link-text {
+    font-size: 0.8rem;
+  }
+}

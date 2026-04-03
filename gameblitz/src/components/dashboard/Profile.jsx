@@ -31,7 +31,7 @@ function Profile() {
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className="w-full h-120 max-w-4xl bg-white/5 backdrop-blur-md rounded-2xl shadow-xl p-6"
+        className="bg-[var(--bg-dark)] w-full h-120 max-w-4xl bg-white/5 backdrop-blur-md rounded-2xl shadow-xl p-6"
       >
         {/* Team Header */}
         <div className="text-center mb-6">
