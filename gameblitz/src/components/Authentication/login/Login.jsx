@@ -21,7 +21,7 @@ export default function Login({ switchToSignup }) {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Login data:", formData);
+    // console.log("Login data:", formData);
 
     // later → API call
     try {
@@ -37,9 +37,6 @@ export default function Login({ switchToSignup }) {
       }else{
         navigation("/no-team")
       }
-
-      
-     
     } catch (error) {
       console.error("Login failed:", error);
       toast.error("Login failed. Please check your credentials.");
@@ -56,7 +53,6 @@ export default function Login({ switchToSignup }) {
       }
     } catch (error) {
       console.error("Error checking authentication:", error);
-      
     }
   },[])
 

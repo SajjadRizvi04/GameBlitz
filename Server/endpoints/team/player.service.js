@@ -39,3 +39,35 @@ export const authenticatePlayer = async (userId) => {
     }
     // return rows[0];
 }
+
+export const fetchAllTeamsByLocation = async (locationId)=> {
+    const [rows] = await connection.query(`select * from teams where location_id = ?`, [locationId]);
+    return rows;
+}
+
+
+export const createTeam = async (
+    teamName,
+    locationId,
+    sport,
+    adminId,
+    description
+) => {
+    const [row]= await connection.query(`select sport_id from sports where name = ?`, [sport]);
+    if(row.length === 0){
+        throw DomainError.notFound("Sport not found");
+    }
+    const sportId = row[0].sport_id;
+    const [result] = await connection.query(
+        `INSERT INTO teams (name, location_id, sport_id, admin_id, description)
+         VALUES (?, ?, ?, ?, ?)`,
+        [teamName, locationId, sportId, adminId, description]
+    );
+    return result.insertId; // Return the ID of the newly created team
+}
+
+
+export const fetchLocations = async()=>{
+    const [rows] = await connection.query(`SELECT * FROM locations`);
+    return rows;
+}

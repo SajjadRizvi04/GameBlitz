@@ -1,38 +1,45 @@
 import React, { useState } from 'react';
 import './CreateTeam.css';
 import NormalButton from '../../shared/NormalButton';
+import { createTeam ,getTeamsByLocation,fetchLocations} from '../../APIs/teams apis/teamsApis';
+import { getRegisteredSports } from '../../Authentication/APIs/authentication.api';
+import { useEffect } from 'react';
+import SpinLoader from '../../Authentication/utilities/helper components/SpinLoader/SpinLoader';
 
-const SPORTS = [
-    { id: 1, name: 'Soccer' },
-    { id: 2, name: 'Basketball' },
-    { id: 3, name: 'Cricket' },
-    { id: 4, name: 'Volleyball' },
-    { id: 5, name: 'Badminton' },
-];
 
-const LOCATION = [
-    { id: 1, name: 'Delhi' },
-    { id: 2, name: 'Mumbai' },
-    { id: 3, name: 'Bangalore' },
-    { id: 4, name: 'Chennai' },
-    { id: 5, name: 'Hyderabad' },
-    { id: 6, name: 'Kolkata' },
-    { id: 7, name: 'Pune' },
-    { id: 8, name: 'Ahmedabad' },
-    { id: 9, name: 'Surat' },
-    { id: 10, name: 'Jaipur' },
-]
 
 function CreateTeam({ setToggleView }) {
     const [formData, setFormData] = useState({
         teamName: '',
         teamDescription: '',
-        teamSport: SPORTS[0].name,
-        teamLocation: LOCATION[0].name,
+        teamSport: "",
+        teamLocation: "",
     });
 
     const [errors, setErrors] = useState({});
     const [isSubmitting, setIsSubmitting] = useState(false);
+    const [registeredSports, setRegisteredSports] = useState([]);
+    const [locations, setLocations] = useState([]);
+    const [loading,setLoading] = useState(true);
+
+
+    useEffect(()=>{
+        const fetchData = async () => {
+            try {
+                const sportsData = await getRegisteredSports();
+                setRegisteredSports(sportsData);
+                const locationsData = await fetchLocations();
+                setLocations(locationsData);
+                // console.log("ydgshgdhg", sportsData, locationsData)
+            } catch (error) {
+                console.error("Error fetching data:", error);
+            } finally {
+                setLoading(false);
+            }
+        };
+        fetchData();
+    },[])
+
 
     const validateForm = () => {
         const newErrors = {};
@@ -102,8 +109,8 @@ function CreateTeam({ setToggleView }) {
             setFormData({
                 teamName: '',
                 teamDescription: '',
-                teamSport: SPORTS[0].name,
-                teamLocation: LOCATION[0].name,
+                teamSport: "",
+                teamLocation: "",
             });
         } catch (error) {
             console.error('Error creating team:', error);
@@ -111,6 +118,9 @@ function CreateTeam({ setToggleView }) {
             setIsSubmitting(false);
         }
     };
+    if(loading){
+        return <SpinLoader />
+    }
 
     return (
         <div className="container">
