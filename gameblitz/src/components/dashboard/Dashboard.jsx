@@ -7,7 +7,6 @@ export function Dashboard(){
             <section className="flex dashboard-template">
                 <DashboardSidebar />
                 <Outlet />
-
             </section>
         </>
     )
