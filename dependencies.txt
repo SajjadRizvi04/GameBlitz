@@ -1,0 +1,5 @@
+npm install
+react-router
+react-router-dom
+react-icons
+framer-motion
