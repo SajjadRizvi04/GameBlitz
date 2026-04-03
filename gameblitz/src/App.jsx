@@ -7,11 +7,12 @@ function App() {
   return (
     <>
       <Navbar />
-      <Routes>
+      {/* <Routes>
         <Route path='/home' element={<Home/>}></Route>
-      </Routes>
+      </Routes> */}
     </>
   );
 }
 
 export default App;
+
