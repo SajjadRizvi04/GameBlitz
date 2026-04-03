@@ -27,7 +27,7 @@ function Navbar() {
         <div className="hidden md:flex gap-8 items-center">
           <NavLink to="/" className={linkStyle}>Home</NavLink>
           <NavLink to="/about" className={linkStyle}>About</NavLink>
-          <NavLink to="/features" className={linkStyle}>Features</NavLink>
+
           <NavLink to="/contact" className={linkStyle}>Contact</NavLink>
         </div>
 

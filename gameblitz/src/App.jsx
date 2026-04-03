@@ -5,7 +5,7 @@ import Home from "./components/home/Home";
 import About from "./components/about/About";
 import { Dashboard } from "./components/dashboard/Dashboard";
 import Profile from "./components/dashboard/Profile";
-import Teams from "./components/dashboard/teams/Teams";
+import Teams from "./components/dashboard/Teams";
 
 function App() {
   return (

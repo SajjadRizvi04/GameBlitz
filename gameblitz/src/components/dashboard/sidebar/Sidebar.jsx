@@ -10,7 +10,7 @@ import {
 
 const SIDEBAR_ITEMS = [
   { path: "profile", label: "Profile", icon: <FaTachometerAlt /> },
-  { path: "/teams", label: "Teams", icon: <FaUsers /> },
+  { path: "teams", label: "Teams", icon: <FaUsers /> },
   { path: "/matches", label: "Matches", icon: <FaCalendarAlt /> },
   { path: "/performance", label: "Performance", icon: <FaChartLine /> },
   { path: "/settings", label: "Settings", icon: <FaCog /> },
