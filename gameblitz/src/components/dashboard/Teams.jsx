@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import OrangeButton from "../shared/Orangebutton";
+import OrangeButton from "../shared/OrangeButton";
 
 const roleColors = {
   Captain: "text-yellow-400 bg-yellow-400/10 border-yellow-400/25",

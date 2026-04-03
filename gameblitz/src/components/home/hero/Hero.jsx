@@ -2,7 +2,7 @@ import {react, useRef, useState, useEffect} from 'react'
 // import { Link } from 'react-router-dom'
 // import {motion} from 'framer-motion'
 // import {useScroll, useTransform} from 'framer-motion'
-import OrangeButton from '../../shared/Orangebutton'
+import OrangeButton from '../../shared/OrangeButton'
 import NormalButton from '../../shared/NormalButton'
 import bgImg from '/multi-sport.png'
 import "./Hero.css"

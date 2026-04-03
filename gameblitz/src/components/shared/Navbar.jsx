@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
-import OrangeButton from "./Orangebutton";
+import OrangeButton from "./OrangeButton";
 import NormalButton from "./NormalButton";
 import { CgProfile } from "react-icons/cg";
 import { useNavigate } from "react-router";
 
 function Navbar() {
   const [open, setOpen] = useState(false);
-  const navigation = useNavigate()
+  const navigation = useNavigate();
 
   const linkStyle = ({ isActive }) =>
     `block transition-all duration-200 hover:scale-105 ${
@@ -37,8 +37,8 @@ function Navbar() {
         {/* Desktop Buttons */}
         <div className="hidden flex items-center md:flex gap-3">
             <CgProfile className="text-(--orange) h-8 w-8" />
-          <NormalButton text="Login" />
-          <OrangeButton text="Sign Up" />
+          <NormalButton text="Login" onClick={() => navigation("/login")}/>
+          <OrangeButton text="Sign Up"  onClick={() => navigation("/regis ter")} />
         </div>
 
         {/* Mobile Menu Button */}
