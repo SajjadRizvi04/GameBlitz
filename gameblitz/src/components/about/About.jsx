@@ -3,6 +3,7 @@ import imgBg from "/multi-sport.png"
 import { FaUser, FaMapMarkerAlt, FaFutbol,FaArrowRight } from "react-icons/fa";
  
 import './About.css';
+import Footer from '../shared/footer/Footer'
 import OrangeButton from '../shared/OrangeButton';
 import NormalButton from '../shared/NormalButton';
 
@@ -203,6 +204,7 @@ function AboutUs() {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   )
 }
