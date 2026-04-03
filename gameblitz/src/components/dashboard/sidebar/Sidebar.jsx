@@ -16,6 +16,7 @@ const SIDEBAR_ITEMS = [
   { path: "teams", label: "Team(s)", icon: <FaUsers /> },
   { path: "profile", label: "Profile", icon: <FaTachometerAlt /> },
   { path: "matches", label: "Matches", icon: <FaCalendarAlt /> },
+  { path: "sendRequest", label: "SendRequest", icon: <IoMdNotificationsOutline /> },
   // { path: "chat", label: "Chat", icon: <IoChatbubbleEllipsesOutline />},
   // { path: "notification", label: "Notification", icon: <IoMdNotificationsOutline /> },
 ];

@@ -13,7 +13,9 @@ import Login from "./components/Authentication/login/Login";
 import Signup from "./components/Authentication/signup/Signup";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+
 import Notification from "./components/dashboard/Notification";
+import Request from "./components/dashboard/Request";
 import LandingNoTeam from "./components/dashboard/no-team/LandingNoTeam";
 import PartOfTeam from "./components/dashboard/part-of-team/PartOfTeam";
 import AdminPanel from "./components/dashboard/admin-panel/AdminPanel";
@@ -40,6 +42,7 @@ function App() {
           <Route path="matches" element={<Match/>}></Route>
           <Route path="chat" element={<Chat/>}></Route>
           <Route path="notification" element={<Notification/>}></Route>
+          <Route path="sendRequest" element={<Request/>}></Route>
         </Route>
         <Route path="/no-team" element={<LandingNoTeam/>}></Route>
         <Route path="/part-of-team" element={<PartOfTeam/>}></Route>
