@@ -35,7 +35,7 @@ app.use("/api/auth", authenticationRouter);
 app.use("/api/sports", sportsRouter);
 
 
-app.post("/api/auth/login",passport.authenticate("local"), (req, res) => {
+app.post("/login",passport.authenticate("local"), (req, res) => {
     res.json({
         message: "Login successful",
         user: {

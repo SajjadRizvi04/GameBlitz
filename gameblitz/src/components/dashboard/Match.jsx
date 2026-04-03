@@ -72,7 +72,7 @@ export default function MatchesSection() {
 
   return (
     <div className="w-full flex justify-center bg-[var(--bg-dark)]">
-      <div className=" bg-gray-900 text-white p-6 flex justify-center backdrop-blur-md rounded-2xl">
+      <div className=" bg-gray-900 text-white p-6 flex justify-center backdrop-blur-md  w-full">
         <div className="w-full max-w-2xl">
           {/* Header */}
           <motion.div

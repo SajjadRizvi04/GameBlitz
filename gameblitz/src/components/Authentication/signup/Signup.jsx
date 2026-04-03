@@ -17,30 +17,17 @@ export default function Signup({ switchToLogin }) {
     password: "",
     confirmPassword: "",
   });
-  const [selectedSports, setSelectedSports] = useState([]);
-  const [loading,setLoading] = useState(false);
+  
+
   const navigation = useNavigate()
 
   const [errors, setErrors] = useState({});
   const [touched, setTouched] = useState({});
   const [phase, setPhase] = useState(1);
-  const [registeredSports, setRegisteredSports] = useState([]); 
+  const [selectedSports, setSelectedSports] = useState([]);
+ 
 
-  useEffect(()=>{
-    // Fetch sports from server on component mount
-    async function fetchSports() {
-      setLoading(true);
-      try {
-        const sports = await getRegisteredSports();
-        setRegisteredSports(sports);
-      } catch (error) {
-        console.error("Failed to fetch sports:", error);
-      } finally {
-        setLoading(false);
-      }
-    }
-    fetchSports();
-  },[])
+ 
 
   // Handle typing
   const handleChange = (e) => {
@@ -132,12 +119,7 @@ export default function Signup({ switchToLogin }) {
     }
   };
 
-  if(loading){
-    return (
-      <section className="signup-section">
-        <SpinLoader/>
-      </section>)
-  }
+
 
   if (phase == 1) {
     return (
@@ -235,7 +217,6 @@ export default function Signup({ switchToLogin }) {
       >
         <section className="signup-section">
           <SportsSelector
-            registeredSports={registeredSports}
             selectedSports={selectedSports}
             setSelectedSports={setSelectedSports}
           />

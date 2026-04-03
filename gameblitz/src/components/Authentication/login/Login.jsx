@@ -3,8 +3,9 @@ import "../signup/Signup.css";
 import { NavLink, useNavigate } from "react-router-dom";
 import "./Login.css";
 import bgImage from "/bgAuth.png";
-import { loginPlayer } from "../APIs/authentication.api";
+import { checkAuthentication, loginPlayer } from "../APIs/authentication.api";
 import { toast } from "react-toastify"; 
+import { useEffect } from "react";
 
 export default function Login({ switchToSignup }) {
   const [formData, setFormData] = useState({
@@ -33,6 +34,20 @@ export default function Login({ switchToSignup }) {
       toast.error("Login failed. Please check your credentials.");
     }
   };
+
+  useEffect(async ()=>{
+    // Check if user is already authenticated
+    try {
+      const res = await checkAuthentication()
+      if(res.authenticated){
+        toast.info("You are already logged in.");
+        navigation("/dashboard")
+      }
+    } catch (error) {
+      console.error("Error checking authentication:", error);
+      
+    }
+  },[])
 
   return (
     <div
