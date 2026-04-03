@@ -5,7 +5,7 @@
   flex-direction: column;
   height: calc(100vh - 70px);
   width: 100%;
-  background: linear-gradient(135deg, rgba(255, 107, 53, 0.03) 0%, rgba(11, 30, 60, 0.05) 100%);
+  /* background: linear-gradient(135deg, rgba(255, 107, 53, 0.03) 0%, rgba(11, 30, 60, 0.05) 100%); */
 }
 
 /* Header Section */

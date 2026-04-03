@@ -86,7 +86,7 @@ export default function Login({ switchToSignup }) {
             <button type="submit">Login</button>
           </form>
 
-          <NavLink to={"/signup"}>
+          <NavLink to={"/register"}>
             <p onClick={switchToSignup} className="link">
               Don't have an account? Sign up
             </p>

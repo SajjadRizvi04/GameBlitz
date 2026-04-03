@@ -3,9 +3,11 @@ import { NavLink } from "react-router-dom";
 import OrangeButton from "./Orangebutton";
 import NormalButton from "./NormalButton";
 import { CgProfile } from "react-icons/cg";
+import { useNavigate } from "react-router";
 
 function Navbar() {
   const [open, setOpen] = useState(false);
+  const navigation = useNavigate()
 
   const linkStyle = ({ isActive }) =>
     `block transition-all duration-200 hover:scale-105 ${
@@ -57,9 +59,9 @@ function Navbar() {
           <NavLink to="/contact" className={linkStyle} onClick={() => setOpen(false)}>Contact</NavLink>
 
           <div className="flex flex-col gap-2 mt-2">
-            <CgProfile className="text-(--orange)" />
-            <NormalButton text="Login" />
-            <OrangeButton text="Sign Up" />
+            {/* <CgProfile className="text-(--orange)" /> */}
+            <NormalButton onClick={() => navigation("/login")} text="Login" />
+            <OrangeButton onClick={() => navigation("/register")} text="Sign Up" />
           </div>
         </div>
       )}

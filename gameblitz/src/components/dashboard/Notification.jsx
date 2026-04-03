@@ -114,8 +114,7 @@ export default function Notification() {
                     variants={cardAnim}
                     exit={cardAnim.exit}
                     layout
-                    whileHover={{ scale: 1.012 }}
-                    className="bg-gray-800 border border-gray-700 rounded-2xl p-4"
+                    className="   rounded-2xl p-4"
                   >
                     {/* Top row */}
                     <div className="flex items-start justify-between gap-3 mb-3">
@@ -126,8 +125,8 @@ export default function Notification() {
                         </div>
                         <div>
                           <div className="flex items-center gap-2">
-                            <span className={`font-bold text-sm ${cfg.accent}`}>{n.from}</span>
-                            <span className={`text-[10px] font-semibold px-2 py-0.5 rounded-full border ${cfg.badge}`}>
+                            <span className={`font-bold text-sm `}>{n.from}</span>
+                            <span className={`text-[10px] font-semibold px-2 py-0.5 rounded-full border`}>
                               {cfg.label}
                             </span>
                           </div>
@@ -151,7 +150,7 @@ export default function Notification() {
                       <motion.button
                         whileTap={{ scale: 0.93 }}
                         onClick={() => reject(n.id)}
-                        className="px-4 py-1.5 rounded-lg text-sm font-medium bg-gray-700 text-white hover:bg-gray-600 transition-colors"
+                        className="px-4 py-1.5 rounded-lg text-sm font-medium hover:bg-gray-600 transition-colors"
                       >
                         Decline
                       </motion.button>

@@ -72,7 +72,7 @@ export default function MatchesSection() {
 
   return (//bg-[var(--bg-dark)]  bg-gray-900
     <div className="w-full flex justify-center ">
-      <div className=" text-white p-6 flex justify-center backdrop-blur-md  w-full">
+      <div className="p-6 flex justify-center backdrop-blur-md  w-full">
         <div className="w-full max-w-2xl">
           {/* Header */}
           <motion.div
@@ -82,7 +82,7 @@ export default function MatchesSection() {
             className="mb-6"
           >
             <h1 className="text-2xl font-bold tracking-tight">
-              Matches <span className="text-orange-400">⚡</span>
+              Matches 
             </h1>
             <p className="text-gray-400 text-sm mt-0.5">
               Warriors FC • Schedule & Results
@@ -90,10 +90,10 @@ export default function MatchesSection() {
           </motion.div>
 
           {/* Tab Switcher */}
-          <div className="flex gap-1 mb-5 bg-gray-800 border border-gray-700 rounded-xl p-1 w-fit">
+          <div className="flex gap-1 mb-5 border border-gray-700 rounded-xl p-1 w-fit">
             {[
-              { key: "upcoming", label: "⏳ Upcoming" },
-              { key: "previous", label: "📋 Results" },
+              { key: "upcoming", label: "Upcoming" },
+              { key: "previous", label: "Results" },
             ].map(({ key, label }) => (
               <button
                 key={key}
@@ -132,7 +132,7 @@ export default function MatchesSection() {
                     key={i}
                     variants={cardAnim}
                     whileHover={{ scale: 1.015 }}
-                    className="bg-gray-800 border border-gray-700 rounded-2xl p-4"
+                    className="border border-gray-700 rounded-2xl p-4"
                   >
                     {/* VS Row */}
                     <div className="flex items-center justify-between gap-3 mb-3">
@@ -149,9 +149,9 @@ export default function MatchesSection() {
 
                     {/* Meta */}
                     <div className="flex items-center justify-between text-xs text-gray-400 border-t border-gray-700 pt-2 mt-1">
-                      <span>📅 {match.date}</span>
-                      <span>🕐 {match.time}</span>
-                      <span>📍 {match.venue}</span>
+                      <span>{match.date}</span>
+                      <span>{match.time}</span>
+                      <span>{match.venue}</span>
                     </div>
                   </motion.div>
                 ))}
@@ -172,7 +172,7 @@ export default function MatchesSection() {
                       key={i}
                       variants={cardAnim}
                       whileHover={{ scale: 1.015 }}
-                      className="bg-gray-800 border border-gray-700 rounded-2xl p-4"
+                      className="border border-gray-700 rounded-2xl p-4"
                     >
                       {/* VS Row */}
                       <div className="flex items-center justify-between gap-3 mb-3">
@@ -191,7 +191,7 @@ export default function MatchesSection() {
 
                       {/* Meta */}
                       <div className="flex items-center justify-between text-xs text-gray-400 border-t border-gray-700 pt-2">
-                        <span>📍 {match.venue}</span>
+                        <span>{match.venue}</span>
                         <span className={`font-semibold text-xs ${cfg.score}`}>
                           {cfg.label}
                         </span>

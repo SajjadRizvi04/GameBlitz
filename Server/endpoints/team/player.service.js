@@ -27,7 +27,8 @@ export const authenticatePlayer = async (userId) => {
     );
 
     if (teamMembersRows.length === 0) {
-        throw DomainError.notFound("Player is not a member of any team");
+        // throw DomainError.notFound("Player is not a member of any team");
+        return false
     }
     
     const teamId = teamMembersRows[0].team_id;

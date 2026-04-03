@@ -70,8 +70,8 @@ export default function Teams() {
     setShowModal(false);
   };
 
-  return (
-    <div className="flex flex-col h-[calc(100vh-70px)] bg-gray-900 text-white w-full ">{/*bg-gray-900 text-white*/}
+  return (//bg-gray-900 text-white
+    <div className="flex flex-col h-[calc(100vh-70px)]  w-full ">{/*bg-gray-900 text-white*/}
 
       {/* Header */}
       <div className="px-4 sm:px-6 md:px-10 pt-5 pb-4 border-b border-gray-700/60 flex items-center justify-between">
@@ -84,8 +84,8 @@ export default function Teams() {
         <motion.button
           whileTap={{ scale: 0.93 }}
           whileHover={{ scale: 1.05 }}
-          onClick={() => setShowModal(true)}
-          className="bg-orange-400 hover:bg-orange-500 transition-colors text-white text-sm font-semibold px-4 py-1.5 rounded-xl"
+          onClick={() => setShowModal(true)} //bg-orange-400 hover:bg-orange-500 
+          className="transition-colors text-white text-sm font-semibold px-4 py-1.5 rounded-xl"
         >
           + Add Member
         </motion.button>
@@ -108,8 +108,7 @@ export default function Teams() {
                   variants={cardAnim}
                   exit={cardAnim.exit}
                   layout
-                  whileHover={{ scale: 1.012 }}
-                  className="bg-gray-800 text-white border border-gray-700 rounded-2xl p-4 flex items-center gap-3"
+                  className="border border-gray-700 rounded-2xl p-4 flex items-center gap-3"
                 >
                   {/* Avatar */}
                   <div
@@ -122,9 +121,9 @@ export default function Teams() {
                   <div className="flex-1 min-w-0">
                     <p className="font-semibold text-sm truncate">
                       {member.name}
-                      {member.role === "Captain" && " 👑"}
+                      {member.role === "Captain"}
                     </p>
-                    <span className={`inline-block text-[10px] font-semibold px-2 py-0.5 rounded-full border mt-0.5 ${roleStyle}`}>
+                    <span className={`inline-block text-[10px] font-semibold px-2 py-0.5 rounded-full border mt-0.5`}>
                       {member.role}
                     </span>
                   </div>
