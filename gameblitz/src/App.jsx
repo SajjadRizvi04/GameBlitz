@@ -6,7 +6,6 @@ import About from "./components/about/About";
 import { Dashboard } from "./components/dashboard/Dashboard";
 import Profile from "./components/dashboard/Profile";
 import Teams from "./components/dashboard/Teams";
-import Teams from "./components/dashboard/Teams";
 import ContactUs from "./components/contact/ContactUs";
 import Chat from "./components/dashboard/Chat";
 import Match from "./components/dashboard/Match";
@@ -14,7 +13,6 @@ import Login from "./components/Authentication/login/Login";
 import Signup from "./components/Authentication/signup/Signup";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import Chat from "./components/dashboard/Chat";
 import Notification from "./components/dashboard/Notification";
 import LandingNoTeam from "./components/dashboard/no-team/LandingNoTeam";
 
