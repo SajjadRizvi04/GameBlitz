@@ -1,19 +1,19 @@
 import "./Sidebar.css";
 import { NavLink } from "react-router-dom";
+import { IoChatbubbleEllipsesOutline } from "react-icons/io5";
+import { IoMdNotificationsOutline } from "react-icons/io";
 import {
   FaTachometerAlt,
   FaUsers,
   FaCalendarAlt,
-  FaChartLine,
-  FaCog,
 } from "react-icons/fa";
 
 const SIDEBAR_ITEMS = [
   { path: "profile", label: "Profile", icon: <FaTachometerAlt /> },
   { path: "teams", label: "Teams", icon: <FaUsers /> },
-  { path: "/matches", label: "Matches", icon: <FaCalendarAlt /> },
-  { path: "/performance", label: "Performance", icon: <FaChartLine /> },
-  { path: "/settings", label: "Settings", icon: <FaCog /> },
+  { path: "matches", label: "Matches", icon: <FaCalendarAlt /> },
+  { path: "chat", label: "Chat", icon: <IoChatbubbleEllipsesOutline />},
+  { path: "notification", label: "Notification", icon: <IoMdNotificationsOutline /> },
 ];
 
 export default function DashboardSidebar() {

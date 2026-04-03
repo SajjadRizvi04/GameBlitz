@@ -1,0 +1,67 @@
+/* Container */
+.sports-container {
+  margin-top: 10px;
+  width: 100%;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 20px;
+}
+
+.sports-container h2 {
+  font-size: 16px;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+/* Grid */
+.sports-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 12px;
+}
+
+/* Card */
+.sport-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* label left, icon right */
+
+  padding: 14px 12px;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+  background: #fafafa;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+.check-icon {
+  font-size: 18px;
+  color: #52c41a; /* green */
+}
+/* ===== Selected State (green theme) ===== */
+.sport-card.selected {
+  border: 2px solid #52c41a;          /* green border */
+  background: #f6ffed;                /* light green bg */
+}
+
+/* Hover */
+.sport-card:hover {
+  border-color: #1677ff;
+}
+
+
+
+/* Active click feedback */
+.sport-card:active {
+  transform: scale(0.96);
+}
+
+/* Responsive tweak */
+@media (max-width: 480px) {
+  .sports-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
